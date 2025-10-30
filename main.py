@@ -18,7 +18,7 @@ stop_words = set(stopwords.words('russian'))
 
 # Загружаем базу знаний
 def load_data():
-    path = "data/info_data.json"
+    path = "/info_data.json"
     if not os.path.exists(path):
         st.error("❌ Файл базы знаний не найден! Убедитесь, что 'data/info_data.json' существует.")
         return {}
@@ -67,5 +67,6 @@ if prompt:
     response = find_answer(prompt, knowledge_base)
     st.markdown("### 📋 Результат:")
     st.info(response)
+
 
 st.markdown("---")
